@@ -17,5 +17,8 @@
 `sudo nano /etc/fstab`最后添加`/dev/disk/by-uuid/uuid /挂载点 ext4 defaults 0 2`
 
 ## 保存配置
+`sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf`
+
 `sudo update-initramfs -u`
-`sudo mdadm --detail --scan`
+
+
